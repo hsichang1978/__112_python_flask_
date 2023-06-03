@@ -19,7 +19,7 @@ dataFrame = pd.DataFrame(data=all_data,columns=['sna','tot','sbi','sarea','mday'
 dataFrame.columns = ["站點名稱","車數","可借","行政區","時間","地址","可還","狀態"]
 dataFrame1 = dataFrame.set_index("站點名稱")        #因改了index，將會回傳新的index，一定要去接收。
 
-group_data = dataFrame.groupby('行政區').sum()  
+group_data = dataFrame.groupby('行政區').sum()  #選擇行政區域
 areas = group_data.index.to_numpy().tolist()
 
 
