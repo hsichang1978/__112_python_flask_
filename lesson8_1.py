@@ -14,7 +14,7 @@ else:
     print(f"連線失敗:{response.status_code}")
 
 
-#pandasj一套能夠有效率的對資料進行篩選及分析的應用程式
+#pandas是一套能夠有效率的對資料進行篩選及分析的應用程式
 dataFrame = pd.DataFrame(data=all_data,columns=['sna','tot','sbi','sarea','mday','ar','bemp','act'])
 min = int(input("請輸入要查詢的可借數量:"))
 mask = dataFrame['sbi'] <= min
